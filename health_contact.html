@@ -1,0 +1,204 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact Us | HealthCare</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./health_analysis.css" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <span class="brand-icon">✚</span>
+          Health<span>Care</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html" id="home">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="./health_contact.html"
+                id="contact"
+              >
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-label">WE ARE HERE TO HELP</span>
+
+          <h1>Get in Touch</h1>
+
+          <p>
+            Have questions about health conditions or treatment methods?
+            Send us a message and we will be happy to hear from you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Content -->
+    <main class="container contact-main">
+      <div class="row justify-content-center">
+        <div class="col-lg-7 col-md-9">
+
+          <div class="dashboard-card contact-card">
+
+            <div class="card-heading">
+              <div class="heading-icon">✉️</div>
+
+              <div>
+                <h2>Contact Us</h2>
+                <p>Fill in the form and send us your enquiry</p>
+              </div>
+            </div>
+
+            <form id="contactForm">
+
+              <div class="mb-3">
+                <label for="name" class="form-label">
+                  Full Name
+                </label>
+
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">
+                  Email Address
+                </label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="condition" class="form-label">
+                  Health Condition
+                </label>
+
+                <input
+                  type="text"
+                  id="condition"
+                  name="condition"
+                  class="form-control"
+                  placeholder="e.g. Diabetes, Thyroid"
+                  required
+                />
+              </div>
+
+              <div class="mb-4">
+                <label for="message" class="form-label">
+                  Your Message
+                </label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-control"
+                  rows="5"
+                  placeholder="Write your message here..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-add w-100">
+                Send Message
+              </button>
+
+              <!-- Success Message -->
+              <div
+                id="successMessage"
+                class="alert alert-success mt-4 d-none"
+                role="status"
+              >
+                Thank you for contacting us! Your message has been received.
+              </div>
+
+            </form>
+          </div>
+
+          <p class="contact-note">
+            <span>ℹ️</span>
+            This website provides general health information and is not
+            a substitute for professional medical advice.
+          </p>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 HealthCare Dashboard. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Contact JS -->
+    <script>
+      const contactForm = document.getElementById("contactForm");
+      const successMessage = document.getElementById("successMessage");
+
+      contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        successMessage.classList.remove("d-none");
+
+        contactForm.reset();
+      });
+    </script>
+  </body>
+</html>
+```
